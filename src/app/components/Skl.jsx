@@ -16,7 +16,7 @@ import useSWR from "swr";
 //     return response;
 // };
 
-async function Skl() {
+function Skl() {
     // const data = await getCustomers()
 
     const fetcher = (...args) => fetch(...args).then((res) => res.json());
