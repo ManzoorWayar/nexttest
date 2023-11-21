@@ -1,6 +1,6 @@
-
+import User from "./User";
 import Customer from "./Customer";
 
 export {
-    Customer
+    User, Customer
 }
