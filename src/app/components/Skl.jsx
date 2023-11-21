@@ -33,7 +33,7 @@ function Skl() {
         data?.map(customer => (
 
 
-            <div key={customer._id}>{customer?.fullName}/</div>
+            <div key={customer._id}>{customer?.title}/</div>
 
         ))
     )
