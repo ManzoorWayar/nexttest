@@ -1,10 +1,11 @@
-import { Customer } from "../../../models";
-import connectDB from "../../../config/connectDB";
+
+import { Customer } from "@/models";
 import { NextResponse } from "next/server";
+import connectDB from "../../lib/connectDB";
 
 
+connectDB();
 export async function GET(request) {
-  connectDB();
   const customers = await Customer.find({})
 
   return NextResponse.json(customers);
