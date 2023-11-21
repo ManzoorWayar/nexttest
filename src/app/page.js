@@ -21,8 +21,8 @@ export default async function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      aklnsd
-      {data?.lenght > 0 && data?.map((customer) => (
+
+      {data?.map((customer) => (
         <p key={customer._id}>{customer.fullName}</p>
       ))}
     </main>

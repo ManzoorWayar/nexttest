@@ -2,10 +2,6 @@ import mongoose from "mongoose";
 
 const CustomerSchema = new mongoose.Schema(
   {
-    technician: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "User",
-    },
     serviceOrder: {
       type: String,
       required: true,
