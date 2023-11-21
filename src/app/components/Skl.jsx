@@ -1,22 +1,34 @@
-import React from 'react'
+"use client"
 
-const getCustomers = async () => {
-    const res = await fetch(`http://localhost:3000/api/customers`);
+import useSWR from "swr";
 
-    if (!res.ok) {
-        const response = await res?.json();
+// const getCustomers = async () => {
+//     const res = await fetch(`http://localhost:3000/api/customers`);
 
-        throw new Error(response[0]?.message);
-    }
+//     if (!res.ok) {
+//         const response = await res?.json();
 
-    const response = await res?.json();
+//         throw new Error(response[0]?.message);
+//     }
 
-    return response;
-};
+//     const response = await res?.json();
+
+//     return response;
+// };
 
 async function Skl() {
-    const data = await getCustomers()
+    // const data = await getCustomers()
 
+    const fetcher = (...args) => fetch(...args).then((res) => res.json());
+
+    const { data, isLoading } = useSWR(
+        `/api/customers`,
+        fetcher
+    );
+
+    if (isLoading) {
+        return <div className="relative">lod</div>
+    }
     return (
         data?.map(customer => (
 
