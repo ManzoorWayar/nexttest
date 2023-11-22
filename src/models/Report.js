@@ -1,6 +1,6 @@
 import mongoose from "mongoose"
 
-const NewsSchema = new mongoose.Schema({
+const ReportSchema = new mongoose.Schema({
   title: {
     type: String,
     required: true
@@ -52,6 +52,6 @@ const NewsSchema = new mongoose.Schema({
   }
 )
 
-const News = mongoose.models.News || mongoose.model("News", NewsSchema)
+const Report = mongoose.models.Report || mongoose.model("Report", ReportSchema)
 
-export default News
+export default Report

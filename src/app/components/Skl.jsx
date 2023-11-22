@@ -29,6 +29,8 @@ function Skl() {
     if (isLoading) {
         return <div className="relative">lod</div>
     }
+
+    console.log({ data });
     return (
         data?.map(customer => (
 

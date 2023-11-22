@@ -1,7 +1,7 @@
 import User from "./User";
 import Customer from "./Customer";
-import News from "./News";
+import Report from "./Report";
 
 export {
-    User, Customer, News
+    User, Customer, Report
 }
