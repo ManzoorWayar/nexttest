@@ -6,7 +6,7 @@ import connectDB from "../../lib/connectDB";
 
 connectDB();
 export async function GET(request) {
-  const customers = await Report.find({})
+  const customers = await User.find({})
 
   return NextResponse.json(customers);
 }
